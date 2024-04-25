@@ -12,6 +12,10 @@ func main() {
 	nums2 := []int{2, 5, 6}
 	n := 3
 	merge(nums1, m, nums2, n)
+	nums1 = []int{1, 2, 3, 0, 0, 0}
+	m = 3
+	nums2 = []int{2, 5, 6}
+	n = 3
 	mergeOptimal(nums1, m, nums2, n)
 
 	//Case 2 - Output = [1]
@@ -20,6 +24,10 @@ func main() {
 	nums2 = []int{}
 	n = 0
 	merge(nums1, m, nums2, n)
+	nums1 = []int{1}
+	m = 1
+	nums2 = []int{}
+	n = 0
 	mergeOptimal(nums1, m, nums2, n)
 
 	//Case 2 - Output = [1]
@@ -28,6 +36,10 @@ func main() {
 	nums2 = []int{1}
 	n = 1
 	merge(nums1, m, nums2, n)
+	nums1 = []int{0}
+	m = 0
+	nums2 = []int{1}
+	n = 1
 	mergeOptimal(nums1, m, nums2, n)
 }
 
