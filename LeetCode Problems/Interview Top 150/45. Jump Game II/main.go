@@ -35,7 +35,10 @@ func jump(nums []int) int {
 }
 
 // ACTUAL SOLUTION: If the range of my CURRENT JUMP availablility is [curBegin, curEnd], and the farthest I can make it in the current
-// values, is stored in curFarthest.
+// values, is stored in curFarthest. So, every step we take, we first check what is the furthest we can go from here. It is either to stay on the current path,
+// when max is curFurthest, or if we have a longer path available to take, which is i (where we currently are) + nums[i] (max number of additional steps we can take from i).
+// Next we check, if the end of the current path has been reached (curEnd), if yes, we need to jump to the next path available, so jumps++
+// At the same time, now curFarthest is the length of our current path, so we set curEnd to curFarthest.
 // Refer: https://www.youtube.com/watch?v=vBdo7wtwlXs
 // Refer: https://leetcode.com/problems/jump-game-ii/solutions/18014/concise-o-n-one-loop-java-solution-based-on-greedy/?source=submission-noac
 func jumpCorrect(nums []int) int {
